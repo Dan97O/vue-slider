@@ -61,10 +61,10 @@ button.next
 	height: 100%;
 }
 
-.slide:not(.active)
+/* .slide:not(.active)
 {
 	display: none;
-}
+} */
 
 .slide .text
 {
@@ -78,13 +78,13 @@ button.next
 .slides,
 .slides img
 {
-	height: 100%;
+	height: 700px;
 }
 
 .slides img
 {
 	width: 100%;
-	object-fit: cover;
+	object-fit: contain;
 }
 
 .slides
