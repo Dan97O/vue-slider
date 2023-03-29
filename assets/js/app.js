@@ -56,6 +56,9 @@ createApp({
       if (this.activeImage < 0) {
         this.activeImage = this.images.length -1
     }
-    }
+    },
+    changeImg(i) {
+      this.activeImage = i;
+  },
   }
 }).mount('#app')
