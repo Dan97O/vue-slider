@@ -15,6 +15,7 @@ createApp({
   data() {
     return {
       activeImage: 0,
+      autoPlay: "",
       images: [
         {
           image: './assets/img/01.webp',
@@ -71,11 +72,11 @@ createApp({
       clearInterval(this.autoPlay)
     },
     autoPlayRestart(){
-      this.autoPlay = setInterval(this.next, 3000)
+      this.autoPlay = setInterval(this.next, 1000)
     }
   },
   mounted() {
     //auto play 3 secondi
-    this.autoPlay = setInterval(this.next, 3000)
+    this.autoPlay = setInterval(this.next, 1000)
 },
 }).mount('#app')
