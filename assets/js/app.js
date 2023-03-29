@@ -46,22 +46,30 @@ createApp({
   },
   methods: {
     next() {
+      //incremento ogni volta che clicco su next 
       this.activeImage++
+
+      //ciclo infinito
       if (this.activeImage === this.images.length) {
         this.activeImage = 0
       }
     },
     prev() {
+      //decremento ogni volta che clicco su prev 
       this.activeImage--
+
+      //ciclo infinito
       if (this.activeImage < 0) {
         this.activeImage = this.images.length - 1
       }
     },
+    //al click attivo l'immagine corrispondente
     changeImg(i) {
       this.activeImage = i;
     },
   },
   mounted() {
+    //auto play 3 secondi
     this.autoPlay = setInterval(this.next, 3000)
 },
 }).mount('#app')
