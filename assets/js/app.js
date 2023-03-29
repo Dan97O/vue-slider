@@ -45,20 +45,23 @@ createApp({
     }
   },
   methods: {
-    next (){
+    next() {
       this.activeImage++
       if (this.activeImage === this.images.length) {
         this.activeImage = 0
       }
     },
-    prev(){
+    prev() {
       this.activeImage--
       if (this.activeImage < 0) {
-        this.activeImage = this.images.length -1
-    }
+        this.activeImage = this.images.length - 1
+      }
     },
     changeImg(i) {
       this.activeImage = i;
+    },
   },
-  }
+  mounted() {
+    this.autoPlay = setInterval(this.next, 3000)
+},
 }).mount('#app')
