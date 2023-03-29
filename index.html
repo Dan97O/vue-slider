@@ -20,7 +20,7 @@
   
 <div id="app">
   <div class="container">
-		<div class="slider">
+		<div class="slider" @mouseover="autoPlayStop" @mouseleave="autoPlayRestart">
 			<div class="controls">
 				<button class="prev" @click="prev">
 					<i class="fa fa-arrow-up"></i>
@@ -33,7 +33,7 @@
 			</div>
       <!-- /.controls -->
 			<div class="slides">
-			  <div class="slide ">
+			  <div class="slide">
           <img :src="images[activeImage].image" alt=""> 
           <div class="text">
             <h2>{{images[activeImage].title}}</h2>

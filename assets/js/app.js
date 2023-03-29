@@ -67,9 +67,15 @@ createApp({
     changeImg(i) {
       this.activeImage = i;
     },
+    autoPlayStop(){
+      clearInterval(this.autoPlay)
+    },
+    autoPlayRestart(){
+      this.autoPlay = setInterval(this.next, 300)
+    }
   },
   mounted() {
     //auto play 3 secondi
-    this.autoPlay = setInterval(this.next, 3000)
+    this.autoPlay = setInterval(this.next, 300)
 },
 }).mount('#app')
