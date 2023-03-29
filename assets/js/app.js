@@ -71,11 +71,11 @@ createApp({
       clearInterval(this.autoPlay)
     },
     autoPlayRestart(){
-      this.autoPlay = setInterval(this.next, 300)
+      this.autoPlay = setInterval(this.next, 3000)
     }
   },
   mounted() {
     //auto play 3 secondi
-    this.autoPlay = setInterval(this.next, 300)
+    this.autoPlay = setInterval(this.next, 3000)
 },
 }).mount('#app')
