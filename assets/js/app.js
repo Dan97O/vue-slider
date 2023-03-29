@@ -8,3 +8,13 @@ Bonus:
 3- quando il mouse va in hover sullo slider, bloccare l'autoplay e farlo riprendere quando esce
 
 */
+
+const { createApp } = Vue
+
+createApp({
+  data() {
+    return {
+      
+    }
+  }
+}).mount('#app')
